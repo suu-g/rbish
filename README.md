@@ -1,28 +1,34 @@
 # Rbish
 
-TODO: Write a gem description
+A erb-shellscript executor
 
 ## Installation
 
-Add this line to your application's Gemfile:
-
-    gem 'rbish'
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
+Install it yourself as:
 
     $ gem install rbish
 
 ## Usage
 
-TODO: Write usage instructions here
+Just give the filename of your shellscript to rbish.
+
+    $ rbish myscript.sh
+
+rbish can take strings from STDIN as well.
+
+    $ rbish < myscript.sh
+
+You can use ERB in your shellscript whereever you like.
+
+    $ cat myscript.sh
+    #!/bin/sh
+    <% (1..10).each do |i| %>
+    sudo arping -c 1 <%= "192.168.10.2%02d" % i %>
+    <% end %>
 
 ## Contributing
 
-1. Fork it ( http://github.com/<my-github-username>/rbish/fork )
+1. Fork it ( http://github.com/suu-g/rbish/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
