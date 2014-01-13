@@ -1,6 +1,6 @@
 # Rbish
 
-A erb-shellscript executor
+An erb-shellscript executor
 
 ## Installation
 

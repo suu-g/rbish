@@ -8,9 +8,9 @@ Gem::Specification.new do |spec|
   spec.version       = Rbish::VERSION
   spec.authors       = ["suu-g"]
   spec.email         = ["suu-g@kata.me"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
+  spec.summary       = %q{An erb-shellscript executor}
   spec.description   = spec.summary
-  spec.homepage      = ""
+  spec.homepage      = "http://github.com/suu-g/rbish"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)

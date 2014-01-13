@@ -15,7 +15,7 @@ module Rbish
 
   # not capable in ruby 1.8
   [:debug, :info, :warn, :error, :fatal].each do |meth|
-    define_singleton_method(meth){ Log.send(meth) }
+    define_singleton_method(meth){|msg| Log.send(meth, msg) }
   end
 
   def self.init
